@@ -1,0 +1,176 @@
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Publish an Event</title>
+<link rel="stylesheet" href="css/styleadd.css">
+
+<!--[if (gt IE 9)|!(IE)]><!-->
+<!--<![endif]-->
+<title>Publish an Event</title>
+
+<script src="js/html5shiv.js"></script>
+<link rel="stylesheet" media="screen" href="css/ie.css">
+<![endif]-->
+<script type="text/javascript" charset="UTF-8" src="http://maps.googleapis.com/maps-api-v3/api/js/32/11/common.js"></script><script type="text/javascript" charset="UTF-8" src="http://maps.googleapis.com/maps-api-v3/api/js/32/11/util.js"></script><script type="text/javascript" charset="UTF-8" src="http://maps.googleapis.com/maps-api-v3/api/js/32/11/stats.js"></script>
+<body data-brackets-id="89485" style=""> </body>
+<div data-brackets-id="89486" class="texture">
+<!--==============================
+              header
+=================================-->
+<header data-brackets-id="89487" id="home" class="page">
+  <div data-brackets-id="89488" class="navigation single-page-nav">
+    <div data-brackets-id="89489" class="container_12">
+      <div data-brackets-id="89490" class="grid_12">
+        <h1 data-brackets-id="89491" class="logo">
+         Jawaher Alamri
+        </h1>
+        <nav data-brackets-id="89492">
+          <ul data-brackets-id="89493">
+           <li data-brackets-id="89494"><a data-brackets-id="89495" href="index.html">Home</a></li>
+           <li data-brackets-id="89496"><a data-brackets-id="89497" href="index.html">About Me</a></li>
+           <li data-brackets-id="89498"><a data-brackets-id="89499" href="index.html">Skills</a></li>
+           <li data-brackets-id="89500"><a data-brackets-id="89501" href="index.html" class="current">My Courses</a></li>
+           <li data-brackets-id="89502"><a data-brackets-id="89503" href="index.html">Get in Touch</a></li>
+         </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+    </header>
+       <h2><br/></h2>
+    
+    
+    <body>
+<h2 data-brackets-id="89595"> Publish an Event</h2>
+    <div style="margin:0 auto;width:70%;text-align:left">
+      
+<form class="myForm" method="get"  action="jawaher Alamri">
+<p>
+<label>Event Name
+<input id = "name" type="text" name="Event name" required>
+</label> 
+</p>
+
+<p>
+<label> Date 
+<input id ="date" type="date" name="date" required>
+</label>
+</p>
+    <p>
+<label> Start Time 
+        <input id = "stime" type="time" name="time" required>
+</label>
+</p>
+     <p>
+<label> End Time 
+        <input id = "etime" type="time" name="time" required>
+</label>
+</p>
+<p>
+<label> Event Category
+<select id="Category" name="Event Category">
+<option value="" selected="selected">Select One</option>
+<option id ="edu" value="Educational" >Educational</option>
+<option id ="Technology" value="Technology" >Technology</option>
+<option id ="Shopping" value="Shopping" >Shopping</option>
+<option id ="Food" value="Food" >Food</option>
+<option id ="ART" value="ART" >ART</option>
+</select>
+</label> 
+</p>
+
+<p>
+<label>Location
+<input id = "location" type="text" name="Location" required>
+</label>
+</p>
+
+<fieldset>
+<legend>Visitors Gender</legend>
+    
+<div>
+<input id="Male" class="radio-custom" name="Visitors Gender" type="radio" >
+            <label for="Male" class="radio-custom-label">Male</label>
+        </div>
+    <div>
+            <input id="Female" class="radio-custom" name="Visitors Gender" type="radio">
+            <label for="Female" class="radio-custom-label">Female</label>
+        </div>
+    </fieldset>
+<fieldset>
+
+
+<legend>For:</legend>
+     <div>
+        <input id="KSU facility" class="checkbox-custom" name="KSU facility" type="checkbox" >
+        <label for="KSU facility" class="checkbox-custom-label">KSU Faculty</label>
+      </div>
+     <div>
+        <input id="KSU Student" class="checkbox-custom" name="KSU Student" type="checkbox">
+        <label for="KSU Student" class="checkbox-custom-label">KSU Student </label>
+      </div>
+    <div>
+        <input id="KSU Employee" class="checkbox-custom" name="KSU Employee" type="checkbox">
+        <label for="KSU Employee" class="checkbox-custom-label">KSU Employee </label>
+      </div>
+      <div>
+        <input id="Not specifiec" class="checkbox-custom" name="Not specifiec" type="checkbox">
+        <label for="Not specifiec"class="checkbox-custom-label">Not specifiec</label>    
+    </div>
+    </fieldset>
+<p>
+<label>Description
+<textarea id =" desc" name="Description" maxlength="500"></textarea>
+</label>
+</p>
+<button onclick="results()">Submit</button> 
+
+     
+<script>
+function results(){
+   
+       var eventname = document.getElementById("name").innerHTML;
+       localStorage.setItem("ename", eventname);
+       var evname = localStorage.getItem("ename");
+    //date
+       var datee = document.getElementById("date").innerHTML;
+       localStorage.setItem("dateee", datee);
+       var evdate = localStorage.getItem("dateee");
+ 
+       var sstime = document.getElementById("stime").innerHTML;
+       localStorage.setItem("ssstime", sstime);
+       var evstime = localStorage.getItem("ssstime");
+
+       var eetime = document.getElementById("etime").innerHTML;
+       localStorage.setItem("eeetime", eetime);
+       var evetime = localStorage.getItem("eeetime");
+ 
+       var cat = document.getElementById("Category").innerHTML;
+       localStorage.setItem("evcat", cat);
+       var cate = localStorage.getItem("evcat");
+
+    
+       var evdesc = document.getElementById("desc").innerHTML;
+       localStorage.setItem("evedesc", sstime);
+       var descr = localStorage.getItem("evedesc");
+    
+       Document.write("<p> EventName:"+evname);
+       Document.write("<p> Event Date:"+evdate);
+       Document.write("<p> Start Time :"+evstime);
+       Document.write("<p> End Time:"+evetime);
+       Document.write("<p> Event Category:"+cate);
+       Document.write("<p> Descriptiony:"+descr);    
+       Document.write("<p> Event Name:"+obj);
+
+
+}
+    </script>
+       </form>
+    </div>
+    </body>
+    </div>
+</html>
+     
